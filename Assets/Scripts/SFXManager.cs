@@ -25,13 +25,17 @@ public class SFXManager : MonoBehaviour
         
         //BgMusicAudioSource.GetComponent<AudioSource>().Play();       
     }
-
+    
 
 
     //called in the PlayerController Script
     public void PlayerShoot()
     {
+        SFXaudioSource.pitch = UnityEngine.Random.Range(0.7f, 1.3f);
+        
         SFXaudioSource.PlayOneShot(playerShoot);
+
+
     }
 
     //called in the PlayerController Script
